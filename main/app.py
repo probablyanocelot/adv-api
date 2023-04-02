@@ -1,15 +1,19 @@
 from dataclasses import dataclass
-from flask import Flask, jsonify, abort
+from flask import Flask, jsonify, abort, request
 from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
 from flask_migrate import Migrate
 import requests
 
-from producer import publish
+# from producer import publish
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@db/main'
+# app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@db/main'  # :root
+# :5432 , :33068
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://test:test@db:5432/adv_lnd'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ECHO'] = True
 CORS(app)
 db = SQLAlchemy(app)
 
@@ -54,7 +58,25 @@ def index():
 def bank():
     # content = request.json
     # content = {'me': 'irritable'}
-    return jsonify(JsonObject.query.all())
+    # return jsonify(JsonObject.query.all())
+    if request.method == 'GET':
+        try:
+            return jsonify(JsonObject.query.all())
+        except:
+            abort(400, 'Something went wrong!')
+
+    if request.method == 'POST':
+        try:
+            data = request.json
+            jsonObject = JsonObject(data=data)
+            db.session.add(jsonObject)
+            db.session.commit()
+        except:
+            abort(400, 'Something went wrong!')
+
+        return jsonify({
+            'message': 'success'
+        })
     # return jsonify(JsonObject.query.all())
 
 # @app.route('/api/add_message/<uuid>', methods=['GET', 'POST'])

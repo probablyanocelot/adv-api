@@ -1,7 +1,7 @@
 import pika
 import json
 
-from main import Product, db, JsonObject
+from app import Product, db, JsonObject
 
 params = pika.URLParameters(
     'amqp://myuser:mypassword@rabbitmq:5672?heartbeat=0&blocked_connection_timeout=0')
