@@ -44,7 +44,7 @@ services:
       POSTGRES_DB: adv_lnd
 
     volumes:
-      - db:/var/lib/postgresql/data
+      - .dbdata:/var/lib/postgresql/data
     ports:
       - 33069:5432
     networks:

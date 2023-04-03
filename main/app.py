@@ -42,16 +42,27 @@ class ProductUser(db.Model):
 
 @dataclass
 class JsonObject(db.Model):
+    __tablename__ = 'bank'
     id: int
     data: str
 
-    id = db.Column(db.Integer, primary_key=True, autoincrement=False)
+    id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.Text())
 
 
 @app.route('/api/products')
 def index():
     return jsonify(Product.query.all())
+
+
+@app.route('/api/bank/wipe')
+def wipe():
+    # for all records
+    db.session.query(JsonObject).delete()
+    db.session.commit()
+    return jsonify({
+        'message': 'wiped'
+    })
 
 
 @app.route('/api/bank', methods=['POST', 'GET'])
@@ -63,21 +74,28 @@ def bank():
         try:
             return jsonify(JsonObject.query.all())
         except:
-            abort(400, 'Something went wrong!')
+            abort(400, 'Something went wrong in GET!')
 
     if request.method == 'POST':
         try:
+            # print(request)
             data = request.json
-            jsonObject = JsonObject(data=data)
+            jsonObject = JsonObject(data=str(data))
             db.session.add(jsonObject)
             db.session.commit()
+
         except:
-            abort(400, 'Something went wrong!')
+            abort(400, 'Something went wrong in POST!')
 
         return jsonify({
             'message': 'success'
         })
     # return jsonify(JsonObject.query.all())
+
+
+@app.route('/api/bank/<int:id>', methods=['GET'])
+def bank_by_id(id):
+    return jsonify(JsonObject.query.get(id))
 
 # @app.route('/api/add_message/<uuid>', methods=['GET', 'POST'])
 # def add_message(uuid):
@@ -86,7 +104,7 @@ def bank():
 #     return jsonify({"uuid":uuid})
 
 
-@app.route('/api/products/<int:id>/like', methods=['POST'])
+@ app.route('/api/products/<int:id>/like', methods=['POST'])
 def like(id):
     req = requests.get('http://docker.for.mac.localhost:8000/api/user')
     json = req.json()
