@@ -1,0 +1,1356 @@
+{
+    "items0": [
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "name": "stramulet",
+            "level": 3
+        },
+        {
+            "level": 4,
+            "name": "vitearring"
+        },
+        {
+            "level": 2,
+            "name": "talkingskull"
+        },
+        {
+            "name": "stramulet",
+            "level": 4
+        },
+        {
+            "q": 9,
+            "name": "elixirdex2"
+        },
+        {
+            "level": 2,
+            "name": "intearring"
+        },
+        {
+            "q": 9999,
+            "name": "crabclaw"
+        },
+        {
+            "name": "wbook0",
+            "level": 2
+        },
+        {
+            "level": 7,
+            "stat_type": "dex",
+            "name": "tigerhelmet"
+        },
+        {
+            "name": "vitearring",
+            "level": 3
+        },
+        {
+            "name": "strbelt",
+            "level": 3
+        },
+        {
+            "name": "dexbelt",
+            "level": 2
+        },
+        {
+            "level": 3,
+            "name": "vitearring"
+        },
+        {
+            "name": "dexamulet",
+            "level": 3
+        },
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "name": "stramulet",
+            "level": 3
+        },
+        {
+            "name": "intamulet",
+            "level": 4
+        },
+        {
+            "q": 9,
+            "name": "offeringp"
+        },
+        {
+            "level": 2,
+            "name": "dexearring"
+        },
+        {
+            "level": 2,
+            "name": "intring"
+        },
+        {
+            "name": "strring",
+            "level": 2
+        },
+        {
+            "name": "orbofint",
+            "level": 1
+        },
+        {
+            "level": 1,
+            "name": "ringsj"
+        },
+        {
+            "level": 4,
+            "name": "intamulet"
+        },
+        {
+            "name": "dexring",
+            "level": 2
+        },
+        {
+            "name": "dexearring",
+            "level": 3
+        },
+        {
+            "name": "broom",
+            "level": 8
+        },
+        {
+            "q": 23,
+            "name": "feather1"
+        },
+        {
+            "q": 9999,
+            "name": "feather0"
+        },
+        {
+            "name": "strearring",
+            "level": 4
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "name": "skullamulet",
+            "level": 2
+        },
+        {
+            "name": "orbofstr",
+            "level": 1
+        },
+        {
+            "name": "dexearring",
+            "level": 3
+        },
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "name": "t2intamulet",
+            "level": 0
+        },
+        {
+            "level": 2,
+            "name": "orbofdex"
+        },
+        {
+            "name": "orbofdex",
+            "level": 1
+        },
+        {
+            "q": 12,
+            "name": "elixirstr2"
+        },
+        {
+            "level": 2,
+            "name": "vitring"
+        }
+    ],
+    "items1": [
+        {
+            "q": 67,
+            "name": "cscale"
+        },
+        {
+            "q": 22,
+            "name": "ascale"
+        },
+        {
+            "q": 25,
+            "name": "pleather"
+        },
+        {
+            "q": 234,
+            "name": "bfur"
+        },
+        {
+            "q": 26,
+            "name": "snakefang"
+        },
+        {
+            "name": "dexamulet",
+            "level": 2
+        },
+        {
+            "q": 223,
+            "name": "rattail"
+        },
+        {
+            "q": 40,
+            "name": "spores"
+        },
+        {
+            "q": 1,
+            "name": "bfang"
+        },
+        {
+            "q": 262,
+            "name": "bwing"
+        },
+        {
+            "q": 669,
+            "name": "carrot"
+        },
+        {
+            "q": 231,
+            "name": "leather"
+        },
+        {
+            "q": 560,
+            "name": "gem1"
+        },
+        {
+            "q": 4197,
+            "name": "dstones"
+        },
+        {
+            "q": 34,
+            "name": "weaponbox"
+        },
+        {
+            "q": 2189,
+            "name": "poison"
+        },
+        {
+            "q": 100,
+            "name": "smoke"
+        },
+        {
+            "q": 187,
+            "name": "spidersilk"
+        },
+        {
+            "q": 1329,
+            "name": "gemfragment"
+        },
+        {
+            "q": 533,
+            "name": "essenceoffrost"
+        },
+        {
+            "q": 9829,
+            "name": "beewings"
+        },
+        {
+            "q": 329,
+            "name": "essenceofnature"
+        },
+        {
+            "level": 3,
+            "name": "dexring"
+        },
+        {
+            "q": 25,
+            "name": "shadowstone"
+        },
+        {
+            "q": 25,
+            "name": "goldnugget"
+        },
+        {
+            "q": 6,
+            "name": "bronzenugget"
+        },
+        {
+            "q": 5886,
+            "name": "candypop"
+        },
+        {
+            "name": "cupid",
+            "level": 6
+        },
+        {
+            "q": 620,
+            "name": "gem0"
+        },
+        {
+            "q": 9995,
+            "name": "beewings"
+        },
+        {
+            "q": 4390,
+            "name": "lspores"
+        },
+        {
+            "q": 9553,
+            "name": "crabclaw"
+        },
+        {
+            "q": 90,
+            "name": "goldenegg"
+        },
+        {
+            "q": 6024,
+            "name": "egg7"
+        },
+        {
+            "q": 5631,
+            "name": "egg0"
+        },
+        {
+            "q": 6236,
+            "name": "egg8"
+        },
+        {
+            "q": 6265,
+            "name": "egg3"
+        },
+        {
+            "q": 6187,
+            "name": "egg1"
+        },
+        {
+            "q": 6091,
+            "name": "egg4"
+        },
+        {
+            "q": 6378,
+            "name": "egg5"
+        },
+        {
+            "q": 6224,
+            "name": "egg6"
+        },
+        {
+            "q": 6092,
+            "name": "egg2"
+        }
+    ],
+    "items2": [
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "dexamulet",
+            "level": 1
+        },
+        {
+            "p": "shiny",
+            "name": "hpamulet",
+            "level": 0
+        },
+        {
+            "level": 1,
+            "name": "skullamulet"
+        },
+        {
+            "level": 6,
+            "name": "angelwings"
+        },
+        {
+            "level": 6,
+            "name": "angelwings"
+        },
+        {
+            "q": 3,
+            "name": "cryptkey"
+        },
+        {
+            "level": 2,
+            "name": "dexring"
+        },
+        {
+            "p": "shiny",
+            "name": "quiver",
+            "level": 0
+        },
+        {
+            "name": "warmscarf",
+            "level": 6
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "p": "shiny",
+            "name": "hpamulet",
+            "level": 0
+        },
+        {
+            "q": 200,
+            "name": "snowball"
+        },
+        {
+            "level": 3,
+            "name": "dexbelt"
+        },
+        {
+            "name": "dexbelt",
+            "level": 2
+        },
+        {
+            "name": "strring",
+            "level": 3
+        },
+        {
+            "level": 6,
+            "name": "staffofthedead"
+        },
+        {
+            "name": "strring",
+            "level": 3
+        },
+        {
+            "level": 2,
+            "name": "vitearring"
+        },
+        {
+            "name": "intamulet",
+            "level": 2
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "level": 2,
+            "name": "talkingskull"
+        },
+        {
+            "q": 11,
+            "name": "ink"
+        },
+        {
+            "name": "intring",
+            "level": 4
+        },
+        {
+            "name": "t2stramulet",
+            "level": 0
+        },
+        {
+            "name": "hpbelt",
+            "level": 4
+        },
+        {
+            "level": 4,
+            "name": "dexring"
+        },
+        {
+            "level": 2,
+            "name": "dexearring"
+        },
+        {
+            "q": 4594,
+            "name": "seashell"
+        },
+        {
+            "level": 1,
+            "name": "vitearring"
+        },
+        {
+            "level": 1,
+            "name": "lostearring"
+        },
+        {
+            "name": "stramulet",
+            "level": 4
+        },
+        {
+            "level": 2,
+            "name": "orbofstr"
+        },
+        {
+            "p": "shiny",
+            "name": "hpbelt",
+            "level": 0
+        },
+        {
+            "name": "dexbelt",
+            "level": 3
+        },
+        {
+            "name": "stramulet",
+            "level": 0
+        },
+        {
+            "name": "staffofthedead",
+            "level": 6
+        },
+        {
+            "name": "resistancering",
+            "level": 1
+        },
+        {
+            "q": 12,
+            "name": "elixirint2"
+        },
+        {
+            "name": "ornamentstaff",
+            "level": 5
+        },
+        {
+            "name": "merry",
+            "level": 7
+        }
+    ],
+    "items3": [
+        {
+            "q": 1,
+            "name": "cake"
+        },
+        {
+            "q": 3409,
+            "name": "pumpkinspice"
+        },
+        {
+            "q": 8,
+            "name": "hotchocolate"
+        },
+        {
+            "q": 162,
+            "name": "bunnyelixir"
+        },
+        {
+            "q": 231,
+            "name": "pvptoken"
+        },
+        {
+            "q": 23,
+            "name": "monstertoken"
+        },
+        {
+            "q": 373,
+            "name": "funtoken"
+        },
+        {
+            "q": 2,
+            "name": "greenbomb"
+        },
+        {
+            "q": 2199,
+            "name": "vitscroll"
+        },
+        {
+            "q": 3,
+            "name": "forscroll"
+        },
+        {
+            "q": 5,
+            "name": "snakeoil"
+        },
+        {
+            "q": 4,
+            "name": "rfangs"
+        },
+        {
+            "q": 1,
+            "name": "eggnog"
+        },
+        {
+            "q": 9843,
+            "name": "essenceoflife"
+        },
+        {
+            "q": 270,
+            "name": "candycane"
+        },
+        {
+            "q": 340,
+            "name": "frogt"
+        },
+        {
+            "level": 1,
+            "name": "strbelt"
+        },
+        {
+            "q": 43,
+            "name": "mistletoe"
+        },
+        {
+            "q": 83,
+            "name": "cshell"
+        },
+        {
+            "q": 11,
+            "name": "ornament"
+        },
+        {
+            "q": 8843,
+            "name": "beewings"
+        },
+        {
+            "q": 90,
+            "name": "smoke"
+        },
+        {
+            "name": "t2dexamulet",
+            "level": 0
+        },
+        {
+            "q": 5,
+            "name": "ijx"
+        },
+        {
+            "q": 7980,
+            "name": "candy1"
+        },
+        {
+            "q": 9991,
+            "name": "crabclaw"
+        },
+        {
+            "q": 10,
+            "name": "cryptkey"
+        },
+        {
+            "q": 2,
+            "name": "swirlipop"
+        },
+        {
+            "q": 1279,
+            "name": "candy0"
+        },
+        {
+            "q": 8,
+            "name": "cryptkey"
+        },
+        {
+            "q": 10,
+            "name": "cryptkey"
+        },
+        {
+            "q": 8,
+            "name": "electronics"
+        },
+        {
+            "name": "strearring",
+            "level": 0
+        },
+        {
+            "q": 1,
+            "name": "essenceofgreed"
+        },
+        {
+            "q": 123,
+            "name": "elixirstr1"
+        },
+        {
+            "q": 1057,
+            "name": "elixirstr0"
+        },
+        {
+            "q": 1128,
+            "name": "elixirint0"
+        },
+        {
+            "q": 109,
+            "name": "elixirint1"
+        },
+        {
+            "q": 1033,
+            "name": "elixirvit0"
+        },
+        {
+            "q": 117,
+            "name": "elixirvit1"
+        },
+        {
+            "q": 1052,
+            "name": "elixirdex0"
+        },
+        {
+            "q": 104,
+            "name": "elixirdex1"
+        }
+    ],
+    "items4": [
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "strearring",
+            "level": 0
+        },
+        {
+            "level": 6,
+            "name": "ornamentstaff"
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "p": "shiny",
+            "name": "quiver",
+            "level": 3
+        },
+        {
+            "name": "intearring",
+            "level": 0
+        },
+        {
+            "p": "shiny",
+            "level": 4,
+            "name": "firestars"
+        },
+        {
+            "name": "tigerstone",
+            "level": 0
+        },
+        {
+            "level": 4,
+            "name": "intring"
+        },
+        {
+            "level": 5,
+            "stat_type": "int",
+            "name": "xboots"
+        },
+        {
+            "level": 1,
+            "name": "dexbelt"
+        },
+        {
+            "level": 5,
+            "stat_type": "int",
+            "l": "l",
+            "name": "hpants"
+        },
+        {
+            "name": "ololipop",
+            "level": 0
+        },
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "p": "shiny",
+            "name": "eslippers",
+            "level": 4
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "charmer",
+            "level": 0
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "name": "spookyamulet"
+        },
+        {
+            "p": "shiny",
+            "name": "eslippers",
+            "level": 5
+        },
+        {
+            "name": "strring",
+            "level": 0
+        },
+        {
+            "name": "rednose",
+            "level": 1
+        },
+        {
+            "p": "shiny",
+            "name": "eslippers",
+            "level": 4
+        },
+        {
+            "q": 9997,
+            "name": "seashell"
+        },
+        {
+            "q": 4839,
+            "name": "feather0"
+        },
+        {
+            "p": "shiny",
+            "level": 1,
+            "name": "hpamulet"
+        },
+        {
+            "level": 1,
+            "name": "intbelt"
+        },
+        {
+            "level": 1,
+            "name": "lostearring"
+        },
+        {
+            "name": "handofmidas",
+            "level": 0
+        },
+        {
+            "name": "rednose",
+            "level": 0
+        },
+        {
+            "name": "mbelt",
+            "level": 1
+        },
+        {
+            "level": 2,
+            "name": "vitring"
+        },
+        {
+            "level": 1,
+            "name": "lantern"
+        },
+        {
+            "name": "vitearring",
+            "level": 2
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "q": 10,
+            "name": "frozenkey"
+        },
+        {
+            "name": "pmaceofthedead",
+            "level": 0
+        },
+        {
+            "level": 7,
+            "name": "eears"
+        },
+        {
+            "name": "eslippers",
+            "level": 7
+        },
+        {
+            "q": 110,
+            "name": "armorbox"
+        },
+        {
+            "name": "intearring",
+            "level": 1
+        },
+        {
+            "name": "vitring",
+            "level": 0
+        }
+    ],
+    "items5": [
+        {
+            "level": 4,
+            "name": "ringsj"
+        },
+        {
+            "name": "stramulet",
+            "level": 0
+        },
+        {
+            "p": "shiny",
+            "level": 6,
+            "name": "epyjamas"
+        },
+        {
+            "name": "pinkie",
+            "level": 6
+        },
+        {
+            "stat_type": "dex",
+            "name": "eslippers",
+            "level": 8
+        },
+        {
+            "name": "intbelt",
+            "level": 1
+        },
+        {
+            "p": "shiny",
+            "level": 4,
+            "name": "bowofthedead"
+        },
+        {
+            "name": "mcboots",
+            "level": 0
+        },
+        {
+            "name": "strbelt",
+            "level": 1
+        },
+        {
+            "name": "dexring",
+            "level": 0
+        },
+        {
+            "p": "shiny",
+            "level": 5,
+            "name": "throwingstars"
+        },
+        {
+            "level": 1,
+            "name": "wbook0"
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "tigerhelmet",
+            "level": 7
+        },
+        {
+            "name": "tigerhelmet",
+            "level": 7
+        },
+        {
+            "level": 4,
+            "name": "ringsj"
+        },
+        {
+            "name": "intearring",
+            "level": 0
+        },
+        {
+            "name": "skullamulet",
+            "level": 0
+        },
+        {
+            "q": 1,
+            "name": "friendtoken"
+        },
+        {
+            "name": "vitring",
+            "level": 0
+        },
+        {
+            "level": 4,
+            "name": "strearring"
+        },
+        {
+            "name": "orbofstr",
+            "level": 1
+        },
+        {
+            "q": 10,
+            "name": "firecrackers"
+        },
+        {
+            "q": 7,
+            "name": "elixirvit2"
+        },
+        {
+            "name": "tigershield",
+            "level": 6
+        },
+        {
+            "name": "stramulet",
+            "level": 1
+        },
+        {
+            "name": "sweaterhs",
+            "level": 5
+        },
+        {
+            "name": "eears",
+            "level": 7
+        },
+        {
+            "p": "shiny",
+            "name": "pmaceofthedead",
+            "level": 0
+        },
+        {
+            "name": "suckerpunch",
+            "level": 0
+        },
+        {
+            "name": "vitring",
+            "level": 2
+        },
+        {
+            "name": "spookyamulet"
+        },
+        {
+            "name": "merry",
+            "level": 7
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "p": "shiny",
+            "name": "phelmet",
+            "level": 7
+        },
+        {
+            "p": "shiny",
+            "name": "merry",
+            "level": 0
+        },
+        {
+            "name": "bcape",
+            "level": 5
+        },
+        {
+            "level": 1,
+            "name": "intring"
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "name": "dexring",
+            "level": 0
+        },
+        {
+            "name": "phelmet",
+            "level": 6,
+            "l": "l",
+            "p": "shiny",
+            "stat_type": "int"
+        },
+        {
+            "level": 5,
+            "name": "crossbow"
+        }
+    ],
+    "items6": [
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "level": 7,
+            "name": "eslippers"
+        },
+        {
+            "name": "ornamentstaff",
+            "level": 0
+        },
+        {
+            "name": "cupid",
+            "level": 0
+        },
+        {
+            "level": 1,
+            "name": "armorring"
+        },
+        {
+            "name": "wcap",
+            "level": 9
+        },
+        {
+            "level": 9,
+            "name": "wattire"
+        },
+        {
+            "name": "talkingskull",
+            "level": 2
+        },
+        null,
+        {
+            "name": "orbofvit",
+            "level": 0
+        },
+        {
+            "level": 7,
+            "stat_type": "dex",
+            "name": "eslippers"
+        },
+        {
+            "name": "pmaceofthedead",
+            "level": 6
+        },
+        {
+            "level": 3,
+            "name": "rednose"
+        },
+        {
+            "level": 7,
+            "stat_type": "int",
+            "name": "eslippers"
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "level": 7,
+            "name": "xmaspants"
+        },
+        {
+            "name": "hgloves",
+            "level": 7
+        },
+        {
+            "stat_type": "dex",
+            "name": "ecape",
+            "level": 6
+        },
+        {
+            "name": "bowofthedead",
+            "level": 5
+        },
+        {
+            "p": "shiny",
+            "name": "iceskates",
+            "level": 5
+        },
+        {
+            "name": "ctristone",
+            "level": 0
+        },
+        {
+            "name": "cclaw",
+            "level": 4
+        },
+        {
+            "name": "spookyamulet"
+        },
+        {
+            "name": "ringsj",
+            "level": 4
+        },
+        {
+            "name": "pmaceofthedead",
+            "level": 5
+        },
+        {
+            "p": "shiny",
+            "name": "wattire",
+            "level": 5
+        },
+        {
+            "level": 9,
+            "name": "cclaw"
+        },
+        {
+            "name": "jacko",
+            "level": 0
+        },
+        {
+            "level": 1,
+            "name": "hpbelt"
+        },
+        {
+            "name": "armorring",
+            "level": 1
+        },
+        {
+            "name": "intamulet",
+            "level": 1
+        },
+        {
+            "level": 1,
+            "name": "vitearring"
+        },
+        {
+            "name": "dexamulet",
+            "level": 1
+        },
+        {
+            "name": "santasbelt",
+            "level": 0
+        },
+        {
+            "q": 7,
+            "name": "frozenkey"
+        },
+        {
+            "level": 9,
+            "name": "wshoes"
+        },
+        {
+            "name": "wshoes",
+            "level": 9
+        },
+        {
+            "name": "intamulet",
+            "level": 1
+        },
+        {
+            "p": "shiny",
+            "name": "wcap",
+            "level": 0
+        },
+        {
+            "level": 5,
+            "name": "tshirt9"
+        },
+        {
+            "name": "xmace",
+            "level": 6
+        },
+        {
+            "name": "skullamulet",
+            "level": 0
+        }
+    ],
+    "items7": [
+        {
+            "level": 2,
+            "name": "lantern"
+        },
+        {
+            "name": "lantern",
+            "level": 2
+        },
+        {
+            "level": 4,
+            "name": "hpbelt"
+        },
+        null,
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "bowofthedead",
+            "level": 7
+        },
+        null,
+        {
+            "q": 10,
+            "name": "frozenkey"
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "tigerhelmet",
+            "level": 7
+        },
+        {
+            "q": 9999,
+            "name": "seashell"
+        },
+        {
+            "name": "tigerstone",
+            "level": 0
+        },
+        {
+            "q": 1,
+            "name": "espresso"
+        },
+        null,
+        {
+            "q": 9997,
+            "name": "seashell"
+        },
+        null,
+        {
+            "name": "intring",
+            "level": 0
+        },
+        {
+            "p": "shiny",
+            "name": "warmscarf",
+            "level": 0
+        },
+        {
+            "p": "shiny",
+            "name": "xmasshoes",
+            "level": 0
+        },
+        {
+            "q": 416,
+            "name": "essenceoffire"
+        },
+        {
+            "level": 8,
+            "name": "xmashat"
+        },
+        null,
+        null,
+        {
+            "name": "xmace",
+            "level": 7
+        },
+        {
+            "name": "bowofthedead",
+            "level": 7
+        },
+        {
+            "name": "firestaff",
+            "level": 7
+        },
+        null,
+        {
+            "name": "merry",
+            "level": 7
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+            "q": 10,
+            "name": "frozenkey"
+        },
+        {
+            "name": "tigerhelmet",
+            "level": 7
+        },
+        {
+            "level": 4,
+            "name": "strring"
+        },
+        {
+            "name": "mittens",
+            "level": 0
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        },
+        {
+            "name": "intbelt",
+            "level": 3
+        },
+        {
+            "level": 9,
+            "name": "wattire"
+        },
+        {
+            "name": "merry",
+            "level": 7
+        },
+        {
+            "level": 9,
+            "name": "wattire"
+        },
+        {
+            "name": "quiver",
+            "level": 8
+        }
+    ],
+    "gold": 9500000
+}
