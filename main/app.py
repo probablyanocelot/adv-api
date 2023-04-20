@@ -28,7 +28,7 @@ migrate = Migrate(app, db)
 
 
 @dataclass
-class JsonObject(db.Model):
+class Bank(db.Model):
     __tablename__ = 'bank'
     id: int
     data: str
@@ -37,10 +37,37 @@ class JsonObject(db.Model):
     data = db.Column(db.Text())
 
 
+@dataclass
+class Item(db.Model):
+    __tablename__ = 'item'
+    id: int
+    name: str
+    price: int
+    quantity: int
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128))
+    price = db.Column(db.Integer)
+    location = db.Column(db.String(128))
+    quantity = db.Column(db.Integer, nullable=True)
+
+
+@dataclass
+class BankTeller(db.Model):
+    __tablename__ = 'bank_teller'
+    id: str
+    name: str
+    items: str
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(128))
+    items = db.Column(db.Text())
+
+
 @app.route('/api/bank/wipe')
 def wipe():
     # for all records
-    db.session.query(JsonObject).delete()
+    db.session.query(Bank).delete()
     db.session.commit()
     return jsonify({
         'message': 'wiped'
@@ -52,29 +79,53 @@ def bank():
 
     if request.method == 'GET':
         try:
-            return jsonify(JsonObject.query.all())
+            return jsonify(Bank.query.all())
         except:
             abort(400, 'Something went wrong in GET!')
 
     if request.method == 'POST':
-        try:
-            # print(request)
-            data = request.json
-            jsonObject = JsonObject(data=str(data))
-            db.session.add(jsonObject)
-            db.session.commit()
+        # try:
+        # print(request)
+        data = request.json
+        print(data)
+        # if data.data:
+        #     print(1)
+        #     data = data.data
+        #     print(2)
+        print(3)
+        bank = Bank(data=str(data))
+        print(4)
+        db.session.add(bank)
+        print(5)
+        db.session.commit()
+        print(6)
 
-        except:
-            abort(400, 'Something went wrong in POST!')
+        # except:
+        #     abort(400, 'Something went wrong in POST!')
 
         return jsonify({
             'message': 'success'
         })
 
 
+@app.route('/api/bank/latest', methods=['GET'])
+def get_latest_bank():
+    latest = Bank.query.order_by(Bank.id.desc()).first()
+    return latest.data
+
+
 @app.route('/api/bank/<int:id>', methods=['GET'])
-def bank_by_id(id):
-    return jsonify(JsonObject.query.get(id))
+def get_bank_teller(id):
+    latest = Bank.query.order_by(Bank.id.desc()).first()
+    # bank = Bank.query.get(0)
+    if latest is None:
+        abort(404, 'Bank not found')
+    return latest[id]
+
+
+# @app.route('/api/bank/<int:id>', methods=['GET'])
+# def bank_by_id(id):
+#     return jsonify(Bank.query.get(id))
 
 
 # @app.route('/api/products/<int:id>/like', methods=['POST'])
