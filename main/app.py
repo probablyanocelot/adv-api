@@ -31,10 +31,22 @@ migrate = Migrate(app, db)
 class Bank(db.Model):
     __tablename__ = 'bank'
     id: int
-    data: str
+    bank: str
 
     id = db.Column(db.Integer, primary_key=True)
-    data = db.Column(db.Text())
+    bank = db.Column(db.Text())
+
+
+@dataclass
+class BankSlot(db.Model):
+    __tablename__ = 'bank_slot'
+    id: int
+    bank_id: str
+    items: str
+
+    id = db.Column(db.Integer, primary_key=True)
+    bank_id = db.Column(db.String(8))
+    items = db.Column(db.Text())
 
 
 @dataclass
@@ -52,18 +64,6 @@ class Item(db.Model):
     quantity = db.Column(db.Integer, nullable=True)
 
 
-@dataclass
-class BankTeller(db.Model):
-    __tablename__ = 'bank_teller'
-    id: str
-    name: str
-    items: str
-
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(128))
-    items = db.Column(db.Text())
-
-
 @app.route('/api/bank/wipe')
 def wipe():
     # for all records
@@ -75,7 +75,7 @@ def wipe():
 
 
 @app.route('/api/bank', methods=['POST', 'GET'])
-def bank():
+def get_or_post_bank():
 
     if request.method == 'GET':
         try:
@@ -84,43 +84,53 @@ def bank():
             abort(400, 'Something went wrong in GET!')
 
     if request.method == 'POST':
-        # try:
-        # print(request)
-        data = request.json
-        print(data)
-        # if data.data:
-        #     print(1)
-        #     data = data.data
-        #     print(2)
-        print(3)
-        bank = Bank(data=str(data))
-        print(4)
-        db.session.add(bank)
-        print(5)
-        db.session.commit()
-        print(6)
+        bank_data = request.json
+        print(bank_data)
+        for slot in bank_data:
+            print(slot)
+            teller = BankSlot(bank_id=str(slot), items=str(bank_data[slot]))
+            try:
+                db.session.add(teller)
+                db.session.commit()
+            except:
+                abort(400, 'Something went wrong in bank teller POST!')
 
-        # except:
-        #     abort(400, 'Something went wrong in POST!')
+        bank = Bank(bank=str(bank_data))
+
+        try:
+            db.session.add(bank)
+            db.session.commit()
+        except:
+            abort(400, 'Something went wrong in bank POST!')
 
         return jsonify({
-            'message': 'success'
+            'message': 'bank post success'
         })
 
 
 @app.route('/api/bank/latest', methods=['GET'])
 def get_latest_bank():
     latest = Bank.query.order_by(Bank.id.desc()).first()
-    return latest.data
+    return latest.bank
 
 
-@app.route('/api/bank/<int:id>', methods=['GET'])
-def get_bank_teller(id):
-    latest = Bank.query.order_by(Bank.id.desc()).first()
-    # bank = Bank.query.get(0)
-    if latest is None:
-        abort(404, 'Bank not found')
-    return latest[id]
+@app.route('/api/bank/<string:bank_id>', methods=['GET'])
+def get_bank_teller(bank_id):
+
+    teller = db.session.query(BankSlot).filter_by(
+        bank_id=bank_id).order_by(BankSlot.id.desc()).first()
+    if teller is None:
+        abort(404, 'Teller not found')
+    return jsonify(teller)
+
+
+# @app.route('/api/bank/<int:id>', methods=['GET'])
+# def get_bank_teller(id):
+#     latest = Bank.query.order_by(Bank.id.desc()).first()
+#     # bank = Bank.query.get(0)
+#     if latest is None:
+#         abort(404, 'Bank not found')
+#     return latest[id]
 
 
 # @app.route('/api/bank/<int:id>', methods=['GET'])
