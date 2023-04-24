@@ -50,28 +50,66 @@ class BankSlot(db.Model):
 
 
 @dataclass
+class Inventory(db.Model):
+    __tablename__ = 'inventory'
+    id: int
+    inventory: str
+
+    id = db.Column(db.Integer, primary_key=True)
+    inventory = db.Column(db.Text())
+
+
+class EquippedItems(db.Model):
+    __tablename__ = 'equipped_items'
+    id: int
+    character: str
+    equipped_items: str
+    head: str
+    body: str
+    legs: str
+    feet: str
+    hands: str
+    neck: str
+    ring1: str
+    ring2: str
+    weapon: str
+    shield: str
+    earring1: str
+    earring2: str
+
+    id = db.Column(db.Integer, primary_key=True)
+    character = db.Column(db.String(128))
+    equipped_items = db.Column(db.Text())
+    head = db.Column(db.String(128))
+    body = db.Column(db.String(128))
+    legs = db.Column(db.String(128))
+    feet = db.Column(db.String(128))
+    hands = db.Column(db.String(128))
+    neck = db.Column(db.String(128))
+    ring1 = db.Column(db.String(128))
+    ring2 = db.Column(db.String(128))
+    weapon = db.Column(db.String(128))
+    shield = db.Column(db.String(128))
+    earring1 = db.Column(db.String(128))
+    earring2 = db.Column(db.String(128))
+
+
+@dataclass
 class Item(db.Model):
     __tablename__ = 'item'
     id: int
     name: str
-    price: int
+    level: int
+    slot: int
+    # price: int
     quantity: int
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128))
     price = db.Column(db.Integer)
-    location = db.Column(db.String(128))
     quantity = db.Column(db.Integer, nullable=True)
-
-
-@app.route('/api/bank/wipe')
-def wipe():
-    # for all records
-    db.session.query(Bank).delete()
-    db.session.commit()
-    return jsonify({
-        'message': 'wiped'
-    })
+    level = db.Column(db.Integer)
+    slot = db.Column(db.Integer)
 
 
 @app.route('/api/bank', methods=['POST', 'GET'])
@@ -121,8 +159,71 @@ def get_bank_teller(bank_id):
         bank_id=bank_id).order_by(BankSlot.id.desc()).first()
     if teller is None:
         abort(404, 'Teller not found')
-    return jsonify(teller)
+    return teller.items  # jsonify(teller)
 
+
+@app.route('/api/<string:char>/slots', methods=['POST', 'GET'])
+def char_equipment(char):
+    if request.method == 'GET':
+        try:
+            return jsonify(EquippedItems.query.all())
+        except:
+            abort(400, 'Something went wrong in GET!')
+
+    if request.method == 'POST':
+        equipment_data = request.json
+        print(equipment_data)
+        equipment = EquippedItems(
+            equipped_items=str(equipment_data),
+            head=str(equipment_data['head']),
+            body=str(equipment_data['body']),
+            legs=str(equipment_data['legs']),
+            feet=str(equipment_data['feet']),
+            hands=str(equipment_data['hands']),
+            neck=str(equipment_data['neck']),
+            ring1=str(equipment_data['ring1']),
+            ring2=str(equipment_data['ring2']),
+            weapon=str(equipment_data['weapon']),
+            shield=str(equipment_data['shield']),
+            earring1=str(equipment_data['earring1']),
+            earring2=str(equipment_data['earring2'])
+        )
+
+        try:
+            db.session.add(equipment)
+            db.session.commit()
+        except:
+            abort(400, 'Something went wrong in equipment POST!')
+
+        return jsonify({
+            'message': 'equipment post success'
+        })
+
+
+@app.route('/api/<string:char>/inventory', methods=['POST', 'GET'])
+def char_inventory(char):
+    if request.method == 'GET':
+        try:
+            return jsonify(Inventory.query.all())
+        except:
+            abort(400, 'Something went wrong in GET!')
+
+    if request.method == 'POST':
+        inventory_data = request.json
+        print(inventory_data)
+        inventory = Inventory(
+            inventory=str(inventory_data)
+        )
+
+        try:
+            db.session.add(inventory)
+            db.session.commit()
+        except:
+            abort(400, 'Something went wrong in inventory POST!')
+
+        return jsonify({
+            'message': 'inventory post success'
+        })
 
 # @app.route('/api/bank/<int:id>', methods=['GET'])
 # def get_bank_teller(id):
