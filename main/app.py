@@ -64,34 +64,34 @@ class EquippedItems(db.Model):
     id: int
     character: str
     equipped_items: str
-    head: str
-    body: str
-    legs: str
-    feet: str
-    hands: str
-    neck: str
-    ring1: str
-    ring2: str
-    weapon: str
-    shield: str
-    earring1: str
-    earring2: str
+    # head: str
+    # body: str
+    # legs: str
+    # feet: str
+    # hands: str
+    # neck: str
+    # ring1: str
+    # ring2: str
+    # weapon: str
+    # shield: str
+    # earring1: str
+    # earring2: str
 
     id = db.Column(db.Integer, primary_key=True)
     character = db.Column(db.String(128))
     equipped_items = db.Column(db.Text())
-    head = db.Column(db.String(128))
-    body = db.Column(db.String(128))
-    legs = db.Column(db.String(128))
-    feet = db.Column(db.String(128))
-    hands = db.Column(db.String(128))
-    neck = db.Column(db.String(128))
-    ring1 = db.Column(db.String(128))
-    ring2 = db.Column(db.String(128))
-    weapon = db.Column(db.String(128))
-    shield = db.Column(db.String(128))
-    earring1 = db.Column(db.String(128))
-    earring2 = db.Column(db.String(128))
+    # head = db.Column(db.String(128))
+    # body = db.Column(db.String(128))
+    # legs = db.Column(db.String(128))
+    # feet = db.Column(db.String(128))
+    # hands = db.Column(db.String(128))
+    # neck = db.Column(db.String(128))
+    # ring1 = db.Column(db.String(128))
+    # ring2 = db.Column(db.String(128))
+    # weapon = db.Column(db.String(128))
+    # shield = db.Column(db.String(128))
+    # earring1 = db.Column(db.String(128))
+    # earring2 = db.Column(db.String(128))
 
 
 @dataclass
@@ -162,11 +162,22 @@ def get_bank_teller(bank_id):
     return teller.items  # jsonify(teller)
 
 
+def get_latest(model, filter=None):
+    """ TESTING NEEDED """
+    if filter is None:
+        return model.query.order_by(model.id.desc()).first()
+    else:
+        return db.session.query(model).filter_by(
+            filter).order_by(model.id.desc()).first()
+
+
 @app.route('/api/<string:char>/slots', methods=['POST', 'GET'])
 def char_equipment(char):
     if request.method == 'GET':
         try:
-            return jsonify(EquippedItems.query.all())
+            # return jsonify(EquippedItems.query.all())
+            return db.session.query(EquippedItems).filter_by(
+                character=character).order_by(EquippedItems.id.desc()).first()
         except:
             abort(400, 'Something went wrong in GET!')
 
@@ -175,18 +186,18 @@ def char_equipment(char):
         print(equipment_data)
         equipment = EquippedItems(
             equipped_items=str(equipment_data),
-            head=str(equipment_data['head']),
-            body=str(equipment_data['body']),
-            legs=str(equipment_data['legs']),
-            feet=str(equipment_data['feet']),
-            hands=str(equipment_data['hands']),
-            neck=str(equipment_data['neck']),
-            ring1=str(equipment_data['ring1']),
-            ring2=str(equipment_data['ring2']),
-            weapon=str(equipment_data['weapon']),
-            shield=str(equipment_data['shield']),
-            earring1=str(equipment_data['earring1']),
-            earring2=str(equipment_data['earring2'])
+            # head=str(equipment_data['head']),
+            # body=str(equipment_data['body']),
+            # legs=str(equipment_data['legs']),
+            # feet=str(equipment_data['feet']),
+            # hands=str(equipment_data['hands']),
+            # neck=str(equipment_data['neck']),
+            # ring1=str(equipment_data['ring1']),
+            # ring2=str(equipment_data['ring2']),
+            # weapon=str(equipment_data['weapon']),
+            # shield=str(equipment_data['shield']),
+            # earring1=str(equipment_data['earring1']),
+            # earring2=str(equipment_data['earring2'])
         )
 
         try:
